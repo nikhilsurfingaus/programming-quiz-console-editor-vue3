@@ -7,13 +7,16 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
+    "bootstrap-vue": "^2.23.1",
     "core-js": "^3.8.3",
     "http-proxy-middleware": "^2.0.6",
     "monaco-editor-vue3": "^0.1.6",
     "primeicons": "^6.0.1",
     "react-bootstrap": "^2.7.4",
     "react-icons": "^4.8.0",
-    "vue": "^3.2.13"
+    "vue": "^3.2.13",
+    "vuejs-progress-bar": "^1.2.8"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~5.0.0",

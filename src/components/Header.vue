@@ -1,7 +1,7 @@
 <template>
   <div class="navbar d-flex justify-content-center align-items-center text-align-center">
-    <img class="logo" :src="logo" alt="site-logo">
-    <h1 class="title text-white">JDoodle</h1>
+    <img class="logo animate__animated animate__slideInDown" :src="logo" alt="site-logo">
+    <h1 class="title animate__animated animate__slideInDown text-white">JDoodle</h1>
   </div>
 </template>
 

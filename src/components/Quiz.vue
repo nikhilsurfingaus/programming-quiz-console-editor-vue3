@@ -1,7 +1,11 @@
 <template>
-  <div class="container d-flex justify-content-center flex-column align-items-center" v-if="!dispResults" >
+  <div class="container d-flex justify-content-center flex-column align-items-center animate__animated animate__fadeIn" v-if="!dispResults" >
     <h1>Start Python Quiz</h1>
     <h3>{{questDisp}} {{question}}</h3>
+    <div class="progress">
+      <div class="progress-bar bg-warning progress-bar-striped progress-bar-animated" role="progressbar" 
+      :style="{width: progressPercent + '%' }" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">{{progressPercent}}%</div>
+    </div>
     <div class="q-ide">
         <MonacoEditor
             theme="vs"
@@ -18,7 +22,10 @@
     </div>
     <button @click="sendCode" class="submit mt-4 btn btn-success" >Test Code <i class="pi pi-code
      ml-2"></i></button>
-    <button @click="handleSubmit" class="submit mt-4 btn btn-primary "  :disabled="!showSubmit" >Submit<i class="pi pi-sign-in ml-2"></i></button>
+    <button @click="handleSubmit" class="submit mt-4 btn btn-primary" :disabled="!showSubmit" data-toggle="tooltip" title="Test Code Before Submit">
+      Submit<i class="pi pi-sign-in ml-2"></i>
+    </button>
+
   </div>
   <!-- Show result component here -->
   <div v-if="dispResults" >
@@ -36,6 +43,9 @@ export default {
     MonacoEditor, Results
   },
   setup() {
+
+    //Progress Bar
+    const progressPercent = ref(0);
 
     //Show Results Component IFF Submited All 5 Questions
     const dispResults = ref(false)
@@ -113,6 +123,8 @@ export default {
     compilation.value = "";
     console.log(submittedOutput.value); // Log final output array
     showSubmit.value = false
+    //Update Progress Bar
+    progressPercent.value += 20;
     if (index.value > 4) {
       question.value = "QUIZ OVER";
       questDisp.value = "";
@@ -123,11 +135,14 @@ export default {
     }
   };
 
+  //Progress Bar
+  const max = 100;
+  const pVal = ref(45);
 
 
     return {options, value, handleTest, 
-    compilation, sendCode, question, handleSubmit, 
-    questDisp, showSubmit, dispResults, submittedOutput, questions};
+    compilation, sendCode, question, handleSubmit, progressPercent,
+    questDisp, showSubmit, dispResults, submittedOutput, questions, max, pVal};
   },
 };
 </script>
@@ -164,5 +179,13 @@ export default {
 
 .submit {
     cursor: pointer;
+}
+
+.progress {
+  width: 80%;
+}
+
+.progress-bar {
+  font-weight: bold;
 }
 </style>

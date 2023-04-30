@@ -6,10 +6,10 @@
       </div>
     </div>
 
-    <div class="row justify-content-center mt-4">
+    <div class="row justify-content-center mt-4 animate__animated animate__fadeIn">
       <div class="col-12 col-md-8">
         <div v-for="(res, index) in resOutput" :key="index">
-          <h2 class="text-center mt-3">Question {{index + 1}}</h2>
+          <h3 class="text-center mt-3 quest">Question {{index + 1}}: {{res.question}}</h3>
           <div class="resOutput">
             <p class="answer" >Answer: {{ res.answer }}</p>
             <p :class="{ 'correct': res.status === 'Correct', 'incorrect': res.status !== 'Correct' }">{{ res.status }}</p>
@@ -132,5 +132,11 @@ import { ref } from 'vue';
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+@media (max-width: 767px) {
+  .quest {
+    font-size: 1.3em;
+  }
 }
 </style>
