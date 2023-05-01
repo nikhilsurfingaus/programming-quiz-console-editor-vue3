@@ -71,6 +71,14 @@ $ npm start
 
 
 ## Demo
+### Desktop
+https://user-images.githubusercontent.com/46309727/235419167-9ed3ad8b-7676-4568-b30f-2811a894ffb1.mov
+
+### Mobile
+https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-8665-ae4b3c1d9a67.mov
+
+
+
 
 You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
 
