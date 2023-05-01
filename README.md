@@ -30,23 +30,20 @@
 
 ## Key Features
 
-* LivePreview - Make changes, See changes
-  - Instantly see what your Markdown documents look like in HTML as you create them.
-* Sync Scrolling
-  - While you type, LivePreview will automatically scroll to the current location you're editing.
-* GitHub Flavored Markdown  
-* Syntax highlighting
-* [KaTeX](https://khan.github.io/KaTeX/) Support
-* Dark/Light mode
-* Toolbar for basic Markdown formatting
-* Supports multiple cursors
-* Save the Markdown preview as PDF
-* Emoji support in preview :tada:
-* App will keep alive in tray for quick usage
-* Full screen mode
-  - Write distraction free.
-* Cross platform
-  - Windows, macOS and Linux ready.
+* Python Quiz
+  - Answer 5 from a selection of 10 random Python Programming Questions
+* Live Monaco Code Editor/Compiler
+  - Run and Execute Python3 code directly on this web app, thanks to JDoodle's REST API
+* Progress Bar
+  - UI/UX Element keeps you up to date on your Quiz's progress 
+* Resulst Summary
+  - Results Summary shows your answer with each question and weather you were correct/incorrect
+* Bootstrap5
+  - Mobile/Desktop Responsive UI/UX elements
+* Animate.css
+  - Animated transitions for DOM Renders
+* Simple Clean Interface
+  - User Friendly
 
 ## How To Use
 
