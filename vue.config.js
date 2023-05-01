@@ -25,9 +25,6 @@ module.exports = {
                 target: 'https://api.jdoodle.com',
                 changeOrigin: true,
                 secure: false,
-                pathRewrite: {
-                    '^/api': '',
-                },
             },
         },
     },
