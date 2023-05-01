@@ -98,7 +98,7 @@ This software uses the following open source packages:
 src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b2/Bootstrap_logo.svg/1280px-Bootstrap_logo.svg.png" alt="drawing"  height="100" width="110"/> <img 
 src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4c/Typescript_logo_2020.svg/1200px-Typescript_logo_2020.svg.png" alt="drawing" width="100"/> <img 
 src="https://raw.githubusercontent.com/serdarciplak/BlazorMonaco/master/BlazorMonaco/icon.png" alt="drawing" width="100"/> <img 
-src="https://www.drupal.org/files/project-images/animate.png" alt="drawing"  height="110" width="180"/>  
+src="https://www.drupal.org/files/project-images/animate.png" alt="drawing"  height="100" width="180"/>  
 
 
 ## Copyright
