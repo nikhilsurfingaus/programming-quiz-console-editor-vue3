@@ -19,13 +19,13 @@
 <p align="center">
   <a href="#key-features">Key Features</a> •
   <a href="#how-to-use">How To Use</a> •
-  <a href="#download">Demo</a> •
-  <a href="#credits">Screenshots</a> •
-  <a href="#related">Design Decisions</a> •
-  <a href="#related">Alternative Approaches</a> •
-  <a href="#related">Challenges</a> •
-  <a href="#related">Future Work</a> •
-  <a href="#license">Copyright</a>
+  <a href="#demo">Demo</a> •
+  <a href="#screenshots">Screenshots</a> •
+  <a href="#design-decisions">Design Decisions</a> •
+  <a href="#alternative-approaches">Alternative Approaches</a> •
+  <a href="#challenges">Challenges</a> •
+  <a href="#future-work">Future Work</a> •
+  <a href="#copyright">Copyright</a>
 </p>
 
 ## Key Features
@@ -77,14 +77,12 @@ https://user-images.githubusercontent.com/46309727/235419167-9ed3ad8b-7676-4568-
 ### Mobile
 https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-8665-ae4b3c1d9a67.mov
 
-
-
-
-You can [download](https://github.com/amitmerchant1990/electron-markdownify/releases/tag/v1.2.0) the latest installable version of Markdownify for Windows, macOS and Linux.
-
 ## Screenshots
 
-Markdownify is an [emailware](https://en.wiktionary.org/wiki/emailware). Meaning, if you liked using this app or it has helped you in any way, I'd like you send me an email at <bullredeyes@gmail.com> about anything you'd want to say about this software. I'd really appreciate it!
+<p float="left">
+  <img src="https://github.com/nikhilsurfingaus/programming-quiz-console-editor-vue3/blob/master/src/assets/demo1.jpg" />
+  <img src="https://github.com/nikhilsurfingaus/programming-quiz-console-editor-vue3/blob/master/src/assets/demo2.jpg" />
+</p>
 
 ## Design Decisions
 ## Alternative Approaches
