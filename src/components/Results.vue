@@ -29,7 +29,7 @@ import { ref } from 'vue';
     export default {
         props: {submittedOutput: Array, questions: Array},
         setup(props) {
-            //Destructuring Props
+            //Destructuring Parent Props
             const { submittedOutput, questions } = props;
             const answers = ["cat", "7", "0 1 2 3", "2 4 6 8 10", "bearmarket", "2 4", "1 3 5 7 9", "True", "False", "6 7 8 9 10" ]
 

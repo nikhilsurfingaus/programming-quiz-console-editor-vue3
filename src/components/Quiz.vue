@@ -50,7 +50,7 @@ export default {
     //Show Results Component IFF Submited All 5 Questions
     const dispResults = ref(false)
 
-    const questionData = ["Print a the word cat to the console" , "Print the integer 7 to the console", "Using a for loop print 4 numbers from 0 to 3", "Print every even number from 1 to 10", "Concatnate the strings bear and market", "Print every even number from 1 to 5", "Print every odd number from 1 to 10", "Print a true output", "Print a false output", "Print 5 numbers from 6 to 10"]
+    const questionData = ["Print a the word cat to the console" , "Print the integer 7 to the console", "Using a for loop print 4 numbers from 0 to 3", "Print every even number from 1 to 10", "Concatenate the strings bear and market", "Print every even number from 1 to 5", "Print every odd number from 1 to 10", "Print a true output", "Print a false output", "Print 5 numbers from 6 to 10"]
 
     //Pick 5 Random Questions From The Question Bank
     const questions = ref([]);
@@ -64,9 +64,9 @@ export default {
 
     //Can only submit after testing code compiled
     const showSubmit = ref(false)
-
     const questDisp = ref('Q1: ')
     
+    //Track questions submitted
     let index = ref(0)
     let question = ref(questions.value[index.value])
     
@@ -74,8 +74,8 @@ export default {
         fontSize: 16,
     })
 
+    //Capture Monaco Editor Value
     const value = ref('')
-
     const compilation = ref('Output...')
 
     //Object Array of Questions and Index
@@ -87,63 +87,71 @@ export default {
         compilation.value = 'Code Compiling...'
     }
 
-  const sendCode = async () => {
-    showSubmit.value = false
-    console.log(value.value);
-    compilation.value = 'Sending Code...';
-    const response = await fetch('/api/v1/execute', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            clientId: '800ee1b291200fc2c401e3e042b4856d',
-            clientSecret: '2243c75fb0ccd0798e25822bf773ccb48dbe34aba25d71afe27b22a92f43cd5',
-            script: value.value,
-            language: 'python3',
-            versionIndex: "0"
-        }),
-    });
 
-    const data = await response.json();
-    console.log(data);
-    compilation.value = data.output;
-    showSubmit.value = true
-  };
+    //Send Monaco Editor Value JDoodle API For Compilation
+    const sendCode = async () => {
+      showSubmit.value = false
+      console.log(value.value);
+      compilation.value = 'Sending Code...';
+      try {
+        const response = await fetch('/api/v1/execute', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({
+                clientId: '800ee1b291200fc2c401e3e042b4856d',
+                clientSecret: '2243c75fb0ccd0798e25822bf773ccb48dbe34aba25d71afe27b22a92f43cd5',
+                script: value.value,
+                language: 'python3',
+                versionIndex: "0"
+            }),
+        });
 
+        const data = await response.json();
+        console.log(data);
+        compilation.value = data.output;
+        showSubmit.value = true
+      } catch (error) {
+        console.error(error);
+        compilation.value = 'Error: ' + error.message;
+        showSubmit.value = true;
+      }
+    };
 
-  const handleSubmit = () => {
-    const answer = compilation.value;
-    const questionIndex = index.value;
-    submittedOutput.value.push({ answer, questionIndex });
-    index.value++;
-    questDisp.value = `Q${index.value + 1}: `;
-    question.value = questions.value[index.value];
-    value.value = "";
-    compilation.value = "";
-    console.log(submittedOutput.value); // Log final output array
-    showSubmit.value = false
-    //Update Progress Bar
-    progressPercent.value += 20;
-    if (index.value > 4) {
-      question.value = "QUIZ OVER";
-      questDisp.value = "";
-      console.log(submittedOutput.value);  // Log final output array
-      //Show Results Component 
-      dispResults.value = true
-      return;
-    }
-  };
+    //Submit Question Answer Passed to Results Component
+    const handleSubmit = () => {
+      const answer = compilation.value;
+      const questionIndex = index.value;
+      submittedOutput.value.push({ answer, questionIndex });
+      index.value++;
+      questDisp.value = `Q${index.value + 1}: `;
+      question.value = questions.value[index.value];
+      value.value = "";
+      compilation.value = "";
+      console.log(submittedOutput.value); // Log final output array
+      showSubmit.value = false
+      //Update Progress Bar
+      progressPercent.value += 20;
+      if (index.value > 4) {
+        question.value = "QUIZ OVER";
+        questDisp.value = "";
+        console.log(submittedOutput.value);  // Log final output array
+        //Show Results Component 
+        dispResults.value = true
+        return;
+      }
+    };
 
-  //Progress Bar
-  const max = 100;
-  const pVal = ref(45);
+    //Progress Bar Values
+    const max = 100;
+    const pVal = ref(45);
 
 
     return {options, value, handleTest, 
-    compilation, sendCode, question, handleSubmit, progressPercent,
-    questDisp, showSubmit, dispResults, submittedOutput, questions, max, pVal};
-  },
+      compilation, sendCode, question, handleSubmit, progressPercent,
+      questDisp, showSubmit, dispResults, submittedOutput, questions, max, pVal};
+    },
 };
 </script>
 
