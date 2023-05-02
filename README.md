@@ -115,10 +115,19 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
   - Some requried parent level import and vue/app binding prior to first DOM render
   
 ## Future Work
-
+* Forums
+  - Create a stackoverflow/forum style feature to holster a community learning and improving their programming skills
+* Login Authentication
+* Multi-Page Application
+  - Home, Quiz, Profile, Forum, About
+* Support More Coding Languages in Quiz
+* UI/UX Improvements with Fonts, Text Too much white space at the moment
+* More Mobile Support
+  - Bootstrap responsive, although borders, text size and font could improve UI/UX more for mobile users
+* Duplicate Code
+  - Some code is repetitive use HOC's (Higher Order Component) Logic
 
 ## Credits
-
 This software uses the following open source packages:
 
 <img src="https://static-00.iconduck.com/assets.00/vue-icon-1024x1024-8qwdup5l.png" alt="drawing" width="100"/> <img 
