@@ -91,7 +91,19 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 * Checkpoints
   - Simple Quiz -> Results checkpoint meets basic needs of client
   - Console Compiler meets clients need to output JDoodle REST API results
+* Progress Bar
+  - Support UX/UI User is aware of their current progress situational awareness
+* Theme
+  - Simple orange theme offers the following
+    - Attention: Orange is a high-visibility color and can be used to draw attention to important elements or calls to action.
+    - Playfulness: Orange can create a fun and playful tone, which may be appropriate for some brands or products.
 
+    - Creativity: Orange is often associated with creativity and innovation, which may be useful for design projects that require a more experimental or cutting-edge         approach.
+  - Results Red/Green Traffic Light Design
+    -  red and green for right and wrong answers in a traffic light style can be especially effective because it is easy to understand and recognize, regardless of            language or cultural background
+* Cognitive Load
+  - Reduced actions on screen minimizes Cognitive Load
+  - Helps Improves UX
 
 ## Alternative Approaches
 * Multi-Page Web Application
