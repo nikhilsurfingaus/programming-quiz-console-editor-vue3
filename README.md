@@ -82,6 +82,16 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 </p>
 
 ## Design Decisions
+* Vue3
+  - Client requests Vue3 Framework
+  - Typescript used to error check with types
+* Bootstrap
+  - Supports Mobile First Development
+  - Scale up, similar UI/UX for Desktop/Mobile users
+* Checkpoints
+  - Simple Quiz -> Results checkpoint meets basic needs of client
+  - Console Compiler meets clients need to output JDoodle REST API results
+
 
 ## Alternative Approaches
 * Multi-Page Web Application
