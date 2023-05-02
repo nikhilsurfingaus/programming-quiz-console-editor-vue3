@@ -83,7 +83,18 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 
 ## Design Decisions
 ## Alternative Approaches
+* Multi-Page Web Application
+  - Using Router/Routes To Be Multi Pages with a Home, Quiz, Profile and Help/About Page
+* Select Coding Langauge Test
+  - Currently only Pyhton3 avaliable for quiz, branching out to other languages the JDoodle offers
+* Login
+  - Some BaaS for Login and User Authentication for profile/tracking programming progress
+  - Mitigate bad actors DDoS with API requests to JDoodle
 ## Challenges
+* JDoodle REST API
+  - JDoodlw REST API documentation was confusing and difficult to integrate into Vue3
+  - Only way to use JDoodle REST API was a PROXY SERVER in `vue.config.js`
+  - Traditional await, fetch asynch function required proxy server to run otherwise failed
 ## Future Work
 
 
