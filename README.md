@@ -82,6 +82,7 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 </p>
 
 ## Design Decisions
+
 ## Alternative Approaches
 * Multi-Page Web Application
   - Using Router/Routes To Be Multi Pages with a Home, Quiz, Profile and Help/About Page
@@ -90,11 +91,23 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 * Login
   - Some BaaS for Login and User Authentication for profile/tracking programming progress
   - Mitigate bad actors DDoS with API requests to JDoodle
+
 ## Challenges
 * JDoodle REST API
   - JDoodlw REST API documentation was confusing and difficult to integrate into Vue3
   - Only way to use JDoodle REST API was a PROXY SERVER in `vue.config.js`
   - Traditional await, fetch asynch function required proxy server to run otherwise failed
+* Vue3
+  - Vue3 is outdated compared to react, more code for similar features in react
+  - Vue3 developer support deficient, most non-english 
+  - Vue3 3rd party npm packages 2-3 years without being updated 
+* Performance
+  - Monaco Console Editor minor impact on UX
+  - Low-Bandwidth could be problematic for cosnole editor 
+* NPM Library Integration
+  - Ran into issues using compoenents from 3rd party npm packages
+  - Some requried parent level import and vue/app binding prior to first DOM render
+  
 ## Future Work
 
 
