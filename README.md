@@ -91,6 +91,7 @@ https://user-images.githubusercontent.com/46309727/235419197-ccd61862-ad4f-4352-
 * Login
   - Some BaaS for Login and User Authentication for profile/tracking programming progress
   - Mitigate bad actors DDoS with API requests to JDoodle
+  - Use localStorage to prevent logging in each time
 * Quiz Answer Analysis
   - Current method compared each answer to every answer in bank
   - Should use question index with each answer object and only correlate the two in a O-O vs O-M relationship
